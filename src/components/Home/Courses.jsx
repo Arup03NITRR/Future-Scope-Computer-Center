@@ -1,5 +1,6 @@
-import { Link } from 'lucide-react';
 import React from 'react';
+// Correctly import Link from react-router-dom for navigation
+import { Link } from 'react-router-dom';
 
 // --- SVG Icon Components ---
 const CodeIcon = () => (
@@ -15,7 +16,7 @@ const AbacusIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 14h.01M9 11h.01M12 11h.01M15 11h.01M5 21h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
 );
 
-// --- Static Data for Course Categories (Now 4 Categories) ---
+// --- Static Data for Course Categories ---
 const categoryMetadata = {
     "Programming Languages": {
         icon: <CodeIcon />,
@@ -41,28 +42,22 @@ const categoryMetadata = {
 
 // --- Reusable Course Card Component ---
 const CourseCategoryCard = ({ title, category }) => {
-    // Defines color variations for background gradients and borders
-    const colorVariants = {
-        indigo: 'from-indigo-50 to-indigo-100 border-indigo-200',
-        green: 'from-green-50 to-green-100 border-green-200',
-        red: 'from-red-50 to-red-100 border-red-200',
-        yellow: 'from-yellow-50 to-yellow-100 border-yellow-200',
-    };
-
     return (
         <div className={`
-            bg-white shadow-lg rounded-xl border-t-4 p-8 flex flex-col 
-            hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer 
+            bg-white shadow-lg rounded-xl border-t-4 p-8 flex flex-col h-full
+            hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 
             ${category.color === 'indigo' ? 'border-indigo-500' : 
               category.color === 'green' ? 'border-green-500' : 
               category.color === 'red' ? 'border-red-500' : 
               'border-yellow-500'}
         `}>
             <div className="mb-4">
-                <div className={`p-3 inline-flex rounded-full ${category.color === 'indigo' ? 'bg-indigo-100' : 
-                  category.color === 'green' ? 'bg-green-100' : 
-                  category.color === 'red' ? 'bg-red-100' : 
-                  'bg-yellow-100'}`}>
+                <div className={`p-3 inline-flex rounded-full ${
+                    category.color === 'indigo' ? 'bg-indigo-100' : 
+                    category.color === 'green' ? 'bg-green-100' : 
+                    category.color === 'red' ? 'bg-red-100' : 
+                    'bg-yellow-100'}`
+                }>
                     {category.icon}
                 </div>
             </div>
@@ -74,12 +69,7 @@ const CourseCategoryCard = ({ title, category }) => {
 
 // --- Main Component to Display All Categories ---
 const Courses = () => {
-    // Convert the metadata object into an array to map over it
     const categories = Object.entries(categoryMetadata);
-
-    const handleExploreClick = () => {
-        window.location.href = '/courses';
-    };
 
     return (
         <section className="bg-gray-50 min-h-screen py-20 font-sans">
@@ -95,15 +85,19 @@ const Courses = () => {
                 </header>
 
                 <main>
-                    {/* Responsive Grid Layout: 1 column on mobile, 2 on tablet, 4 on desktop */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 xl:gap-10">
-                        {categories.map(([title, categoryData]) => (
-                            <CourseCategoryCard key={title} title={title} category={categoryData} />
-                        ))}
+                        {categories.map(([title, categoryData]) => {
+                            // Create a URL-friendly slug from the title for the link
+                            const categorySlug = title.toLowerCase().replace(/ & /g, '-').replace(/ /g, '-');
+                            return (
+                                <Link key={title} to={`/courses/${categorySlug}`}>
+                                    <CourseCategoryCard title={title} category={categoryData} />
+                                </Link>
+                            );
+                        })}
                     </div>
                 </main>
                 
-                {/* MOVED: Explore Courses Button placed below the main content grid */}
                 <div className="text-center mt-16">
                     <Link
                         to="/courses"
@@ -122,7 +116,6 @@ const Courses = () => {
                         </svg>
                     </Link>
                 </div>
-                {/* End of Button */}
             </div>
         </section>
     );

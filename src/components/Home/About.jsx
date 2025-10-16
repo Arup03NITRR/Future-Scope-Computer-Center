@@ -1,5 +1,6 @@
-import { Link } from 'lucide-react';
 import React from 'react';
+// Import the Link component for client-side routing
+import { Link } from 'react-router-dom';
 
 const About = () => {
   // A brief description that will be shown on the main page.
@@ -30,7 +31,7 @@ const About = () => {
             <p className="text-gray-600 leading-relaxed mb-6">
               {shortText}
             </p>
-            {/* This button is now a link that redirects to the full about page. */}
+            {/* Replace the <a> tag with the Link component */}
             <Link 
               to="/about"
               className="mt-4 inline-block bg-transparent border-2 border-blue-600 text-blue-600 py-2 px-6 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
@@ -45,4 +46,3 @@ const About = () => {
 };
 
 export default About;
-
