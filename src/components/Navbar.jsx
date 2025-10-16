@@ -45,6 +45,7 @@ const Navbar = () => {
             <NavLink to="/" className={({ isActive }) => `${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Home</NavLink>
             <NavLink to="/about" className={({ isActive }) => `${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>About</NavLink>
             <NavLink to="/courses" className={({ isActive }) => `${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Courses</NavLink>
+            <NavLink to="/notice" className={({ isActive }) => `${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Notice</NavLink>
             <NavLink to="/hall-of-fame" className={({ isActive }) => `${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Hall of Fame</NavLink>
             <NavLink to="/gallery" className={({ isActive }) => `${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Gallery</NavLink>
             <NavLink to="/contact-us" className="bg-indigo-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300">Contact Us</NavLink>
@@ -76,6 +77,7 @@ const Navbar = () => {
           <NavLink to="/" onClick={handleLinkClick} className={({ isActive }) => `block ${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Home</NavLink>
           <NavLink to="/about" onClick={handleLinkClick} className={({ isActive }) => `block ${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>About</NavLink>
           <NavLink to="/courses" onClick={handleLinkClick} className={({ isActive }) => `block ${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Courses</NavLink>
+          <NavLink to="/notice" onClick={handleLinkClick} className={({ isActive }) => `block ${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Notice</NavLink>
           <NavLink to="/hall-of-fame" onClick={handleLinkClick} className={({ isActive }) => `block ${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Hall of Fame</NavLink>
           <NavLink to="/gallery" onClick={handleLinkClick} className={({ isActive }) => `block ${linkStyles} ${isActive ? activeLinkStyles : inactiveLinkStyles}`}>Gallery</NavLink>
           <NavLink to="/contact-us" onClick={handleLinkClick} className="block bg-indigo-600 text-white text-center mt-2 mx-2 px-3 py-2 rounded-full font-semibold hover:bg-indigo-700 transition-colors duration-300">Contact Us</NavLink>
@@ -86,4 +88,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

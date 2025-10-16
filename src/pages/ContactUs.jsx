@@ -42,21 +42,22 @@ const ContactUs = () => {
               <FaMapMarkerAlt className="w-6 h-6 mr-4 mt-1 text-blue-600 flex-shrink-0" />
               <div>
                 <p className="font-semibold text-gray-700">Our Address</p>
-                <p className="text-gray-600">Future Scope Computer Centre, Haiderpara, Siliguri, West Bengal</p>
+                <p className="text-gray-600">Future Scope Computer Centre, Ward 39, Haidar Para, Siliguri, West Bengal, 734006, India</p>
               </div>
             </div>
             <div className="flex items-start mb-6">
               <FaPhone className="w-6 h-6 mr-4 mt-1 text-blue-600 flex-shrink-0" />
               <div>
                 <p className="font-semibold text-gray-700">Call Us</p>
-                <p className="text-gray-600">(+91) 12345 67890</p>
+                <p className="text-gray-600">+91-9832011163</p>
+                <p className="text-gray-600">+91-9800811163</p>
               </div>
             </div>
             <div className="flex items-start mb-6">
               <FaEnvelope className="w-6 h-6 mr-4 mt-1 text-blue-600 flex-shrink-0" />
               <div>
                 <p className="font-semibold text-gray-700">Email Us</p>
-                <p className="text-gray-600">info@futurescopesiliguri.com</p>
+                <p className="text-gray-600"><a href="mailto:sfsec.siliguri@gmail.com">sfsec.siliguri@gmail.com</a></p>
               </div>
             </div>
             <div className="flex items-start">
@@ -67,6 +68,7 @@ const ContactUs = () => {
                 <p className="text-gray-600"><span className="font-medium">Sunday:</span> 8:00 AM - 2:00 PM</p>
               </div>
             </div>
+            
           </div>
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>

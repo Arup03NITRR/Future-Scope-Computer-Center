@@ -5,6 +5,7 @@ import Gallery from '../components/Home/Gallery';
 import HallOfFame from '../components/Home/HallOfFame';
 import Testimonials from '../components/Home/Testimonials';
 import WhyJoinUs from '../components/Home/WhyJoinUs';
+import NoticeBoard from '../components/Home/NoticeBoard';
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <main>
         <Hero />
         <About />
+        <NoticeBoard />
         <WhyJoinUs />
         <Courses />
         <Gallery />
