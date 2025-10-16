@@ -1,3 +1,4 @@
+import { Link } from 'lucide-react';
 import React from 'react';
 
 const About = () => {
@@ -30,12 +31,12 @@ const About = () => {
               {shortText}
             </p>
             {/* This button is now a link that redirects to the full about page. */}
-            <a 
-              href="/about"
+            <Link 
+              to="/about"
               className="mt-4 inline-block bg-transparent border-2 border-blue-600 text-blue-600 py-2 px-6 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
             >
               View More
-            </a>
+            </Link>
           </div>
         </div>
       </div>

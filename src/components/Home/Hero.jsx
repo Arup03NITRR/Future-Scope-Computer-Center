@@ -1,3 +1,4 @@
+import { Link } from 'lucide-react';
 import React from 'react';
 
 const Hero = () => {
@@ -19,12 +20,12 @@ const Hero = () => {
         <p className="font-serif italic text-3xl md:text-4xl text-blue-400 mb-8 max-w-2xl mx-auto">
           Ignite Your Potential...
         </p>
-        <button 
-          onClick={handleExploreClick}
+        <Link
+          to="/courses"
           className="bg-blue-600 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-700 transition-transform transform hover:scale-105"
         >
           Explore Our Courses
-        </button>
+        </Link>
       </div>
     </div>
   );
