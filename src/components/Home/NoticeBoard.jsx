@@ -16,7 +16,7 @@ const NoticeBoard = () => {
       const sheetId = import.meta.env.VITE_GOOGLE_SHEET_ID;
       // Ensure you have a sheet named 'Notices' or update the name here
       const sheetName = import.meta.env.VITE_GOOGLE_SHEET_NAME_NOTICES || 'Notices';
-      const range = 'A:E'; // Assuming columns are Title, Date, Content, ImageURL, PDFURL
+      const range = 'A:I'; // Assuming columns are Title, Date, Content, ImageURL, PDFURL
       const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!${range}?key=${apiKey}`;
 
       try {

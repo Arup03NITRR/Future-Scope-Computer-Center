@@ -73,7 +73,7 @@ const ContactUs = () => {
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
             <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSfZ5hBjSr6RskSJfPw66UloFgYBxO-QVS8Hcd_vh7Nms56N7Q/viewform?embedded=true"
+              src="https://docs.google.com/forms/d/e/1FAIpQLSctf0qBM31ujrApg-Qtm5xcJzDZ6YfUJM1OEL_YoPMQVBx5Cw/viewform?usp=header"
               width="100%"
               height="520"
               frameBorder="0"
